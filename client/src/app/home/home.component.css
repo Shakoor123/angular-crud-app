@@ -1,0 +1,44 @@
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+}
+
+.nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.303);
+  border-radius: 50px;
+}
+.navleft {
+  margin-left: 30px;
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.navright {
+  margin-right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: teal;
+  border: none;
+  color: aliceblue;
+  font-weight: 400;
+}
+.navright:hover {
+  background-color: rgba(255, 255, 255, 0.211);
+}
+.homeBody {
+  display: flex;
+  width: 100%;
+}
+.cardContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

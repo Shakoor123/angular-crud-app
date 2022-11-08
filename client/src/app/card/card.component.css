@@ -1,0 +1,50 @@
+.card {
+  margin-top: 40px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.384);
+  padding: 20px;
+  border-radius: 0 25px 25px 25px;
+}
+.top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Edit {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: black;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.delete {
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(255, 0, 0);
+  color: black;
+  padding: 10px;
+  font-size: 15px;
+}
+.delete:hover,
+.Edit:hover {
+  scale: 1.1;
+}
+.botom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-top: 30px;
+}

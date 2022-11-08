@@ -1,0 +1,31 @@
+<div class="form">
+  <h3 class="formTitle" *ngIf="create">Create New Phone</h3>
+  <h3 class="formTitle" *ngIf="edit">Edit Phone</h3>
+  <div class="formInput">
+    <label for="name">name</label>
+    <input type="text" class="input" id="name" />
+  </div>
+  <div class="formInput">
+    <label for="1">RAM</label>
+    <select name="" id="1" class="input">
+      <option value="2" class="option">2gb</option>
+      <option value="4" class="option">4gb</option>
+      <option value="6" class="option">6gb</option>
+      <option value="8" class="option">8gb</option>
+    </select>
+  </div>
+  <div class="formInput">
+    <label for="2">Memmory</label>
+    <select name="" id="2" class="input">
+      <option value="32" class="option">32gb</option>
+      <option value="64" class="option">64gb</option>
+      <option value="128" class="option">128gb</option>
+      <option value="256" class="option">256gb</option>
+    </select>
+  </div>
+  <div class="formInput">
+    <label for="price">price</label>
+    <input type="text" class="input" id="price" />
+  </div>
+  <button class="submit">submit</button>
+</div>

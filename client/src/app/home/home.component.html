@@ -1,0 +1,17 @@
+<div class="home">
+  <div class="nav">
+    <span class="navleft">Welcome</span>
+    <button class="navright" (click)="selectForm()">Create</button>
+  </div>
+  <div class="homeBody">
+    <div class="formContainer">
+      <app-form *ngIf="form"></app-form>
+    </div>
+    <div class="cardContainer">
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+    </div>
+  </div>
+</div>
