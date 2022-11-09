@@ -1,12 +1,12 @@
 import express, { Request, Response } from "express";
-import authController from "../controllers/Auth";
+import mobileController from "../controllers/Mobile";
 const router = express.Router();
 router.get("/", (req: Request, res: Response) => {
   res.send("home right now");
 });
-router.post("/phone", authController.cretePhone);
-router.get("/phone", authController.getPhone);
-router.put("/phone", authController.updatePhone);
-router.delete("/phone", authController.deletePhone);
+router.post("/phone", mobileController.cretePhone);
+router.get("/phone", mobileController.getPhone);
+router.put("/phone", mobileController.updatePhone);
+router.delete("/phone/:phoneId", mobileController.deletePhone);
 
 export default router;

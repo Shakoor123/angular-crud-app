@@ -60,18 +60,39 @@ const cretePhone = async (req: Request, res: Response, next: NextFunction) => {
     .catch((err) => res.status(500).json({ err }));
 };
 //get
-const getPhone = async (req: Request, res: Response, next: NextFunction) => {};
+const getPhone = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const phones = await Phone.find();
+    res.status(200).json(phones);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
 //update
-const updatePhone = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {};
+const updatePhone = async (req: Request, res: Response, next: NextFunction) => {
+  const phoneId = req.body.phoneId;
+  const phone = {
+    name: req.body.name,
+    ram: req.body.ram,
+    memmory: req.body.memmory,
+    price: req.body.price,
+  };
+  try {
+    const updatedPhone = await Phone.updateOne(phoneId, phone);
+    res.status(200).json(updatedPhone);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
 
 //delete
-const deletePhone = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {};
+const deletePhone = async (req: Request, res: Response, next: NextFunction) => {
+  const _id = req.params.phoneId;
+  try {
+    const deletedPhone = await Phone.deleteOne({ _id });
+    res.status(200).json(deletedPhone);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
 export default { cretePhone, getPhone, updatePhone, deletePhone };
