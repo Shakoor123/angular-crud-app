@@ -35,7 +35,7 @@ mongoose
     console.log(err);
   });
 
-const PORT: Number = Number(process.env.PORT) || 3000;
+const PORT: Number = Number(process.env.PORT) || 5000;
 const server: Server = app.listen(PORT, () => {
   console.log("server running " + PORT);
 });

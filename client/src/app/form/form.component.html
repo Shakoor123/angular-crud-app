@@ -3,11 +3,11 @@
   <h3 class="formTitle" *ngIf="edit">Edit Phone</h3>
   <div class="formInput">
     <label for="name">name</label>
-    <input type="text" class="input" id="name" />
+    <input type="text" class="input" id="name" [(ngModel)]="name" />
   </div>
   <div class="formInput">
     <label for="1">RAM</label>
-    <select name="" id="1" class="input">
+    <select name="" id="1" class="input" [(ngModel)]="ram">
       <option value="2" class="option">2gb</option>
       <option value="4" class="option">4gb</option>
       <option value="6" class="option">6gb</option>
@@ -16,7 +16,7 @@
   </div>
   <div class="formInput">
     <label for="2">Memmory</label>
-    <select name="" id="2" class="input">
+    <select name="" id="2" class="input" [(ngModel)]="memmory">
       <option value="32" class="option">32gb</option>
       <option value="64" class="option">64gb</option>
       <option value="128" class="option">128gb</option>
@@ -25,7 +25,7 @@
   </div>
   <div class="formInput">
     <label for="price">price</label>
-    <input type="text" class="input" id="price" />
+    <input type="text" class="input" id="price" [(ngModel)]="price" />
   </div>
-  <button class="submit">submit</button>
+  <button class="submit" (click)="onSubmit()">submit</button>
 </div>
