@@ -16,14 +16,21 @@ export class FormComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   onSubmit() {
-    this.http.post<any>('http://localhost:5000/phone', {}).subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-      error: (error) => {
-        console.error('There was an error!', error);
-      },
-    });
+    this.http
+      .post<any>('http://localhost:5000/phone', {
+        name: this.name,
+        ram: this.ram,
+        memmory: this.memmory,
+        price: this.price,
+      })
+      .subscribe({
+        next: (data) => {
+          console.log(data);
+        },
+        error: (error) => {
+          console.error('There was an error!', error);
+        },
+      });
   }
 
   ngOnInit(): void {}

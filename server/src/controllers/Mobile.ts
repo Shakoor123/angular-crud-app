@@ -48,6 +48,8 @@ import { Request, Response, NextFunction } from "express";
 
 //create
 const cretePhone = async (req: Request, res: Response, next: NextFunction) => {
+  console.log(req.body);
+
   const phone = new Phone({
     name: req.body.name,
     ram: req.body.ram,

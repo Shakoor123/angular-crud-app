@@ -10,13 +10,17 @@ import authRout from "./routes/Auth";
 import createHttpError from "http-errors";
 import { config } from "dotenv";
 import mongoose from "mongoose";
+import {} from "cors";
 config();
 const app: Application = express();
+app.use(CorsOptions());
+
 app.use(express.json());
 app.use("/", authRout);
 app.use((req: Request, res: Response, next: NextFunction) => {
   next(new createHttpError.NotFound());
 });
+
 const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
   res.status(err.status || 500);
   res.send({
