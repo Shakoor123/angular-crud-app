@@ -17,7 +17,7 @@ export class FormComponent implements OnInit {
 
   onSubmit() {
     this.http
-      .post<any>('http://localhost:5000/phone', {
+      .post<any>('http://localhost:5000/api/phone', {
         name: this.name,
         ram: this.ram,
         memmory: this.memmory,
@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
       })
       .subscribe({
         next: (data) => {
-          console.log(data);
+          window.location.reload();
         },
         error: (error) => {
           console.error('There was an error!', error);

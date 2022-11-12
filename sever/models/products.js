@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const PhoneSchema = new mongoose.Schema({
   name: {
@@ -18,4 +18,4 @@ const PhoneSchema = new mongoose.Schema({
     required: true,
   },
 });
-export default mongoose.model("phone", PhoneSchema);
+module.exports = mongoose.model("Phone", PhoneSchema);

@@ -37,8 +37,8 @@
   display: flex;
   width: 100%;
 }
-.cardContainer {
+app-card {
+  width: 100%;
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
 }
